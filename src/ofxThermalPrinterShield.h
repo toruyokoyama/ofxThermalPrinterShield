@@ -13,7 +13,7 @@ public:
     void setup(string portName);
     void QRprint(string html);
     
-    void bmpPrint(string bmpPath, int bmpWidth, int bmpHeight, int startLine, int mills);
+    void bmpPrint(string bmpPath, int bmpWidth, int bmpHeight, int mills);
     
 private:
     ofSerial mySerial;

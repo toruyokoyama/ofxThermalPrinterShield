@@ -18,7 +18,7 @@ void ofxThermalPrinterSheild::setup(string portName){
     mySerial.setup(portName,9600);
 }
 
-void ofxThermalPrinterSheild::bmpPrint(string bmpPath, int bmpWidth, int bmpHeight, int startLine, int mills) {
+void ofxThermalPrinterSheild::bmpPrint(string bmpPath, int bmpWidth, int bmpHeight, int mills) {
     std::string path = ofToDataPath(bmpPath);
     
     uint8_t img[bmpWidth * bmpHeight];
@@ -74,7 +74,7 @@ void ofxThermalPrinterSheild::bmpPrint(string bmpPath, int bmpWidth, int bmpHeig
     const int height = bmpHeight;
     const int max_line = 20;
     
-    for (int j = startLine; j < ceil(height / (double)max_line); ++j) {
+    for (int j = 0; j < ceil(height / (double)max_line); ++j) {
         
         int start = width / 8 * j * max_line;
         int end= width / 8 * (j + 1) * max_line;

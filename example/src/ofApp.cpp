@@ -27,7 +27,7 @@ void ofApp::keyPressed(int key){
     if (key == 'b') {
         static int line = 0;
         
-        printer.bmpPrint("logo_thermal_bmp.data",384, 154, line++);
+        printer.bmpPrint("logo_thermal_bmp.data",384, 154, 2000);
         
     }
         
